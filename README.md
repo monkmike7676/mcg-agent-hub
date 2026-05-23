@@ -23,4 +23,5 @@ uvicorn main:app --reload --port 8000
 Notes
 
 - If you need Google GenAI credentials, set the appropriate environment variables (for example `GOOGLE_API_KEY` or `GOOGLE_APPLICATION_CREDENTIALS`) before running the app.
+- For Gemini, create a local `.env` file with `GEMINI_API_KEY` and load it before running your app. This `.env` file is ignored by Git.
 - If `main.py` exposes a different ASGI variable, update the `uvicorn` command accordingly.
