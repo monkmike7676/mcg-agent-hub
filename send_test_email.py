@@ -18,8 +18,10 @@ BUYER_EMAIL = os.getenv("BUYER_EMAIL", "alex@example.com")
 
 
 def build_message() -> EmailMessage:
-    if not EMAIL_USERNAME or not EMAIL_TO:
-        raise ValueError("EMAIL_USERNAME and EMAIL_TO must be set in the environment.")
+    if not EMAIL_USERNAME or not EMAIL_PASSWORD or not EMAIL_TO:
+        raise ValueError(
+            "EMAIL_USERNAME, EMAIL_PASSWORD, and EMAIL_TO must be set in the environment."
+        )
 
     msg = EmailMessage()
     msg["Subject"] = "Inquiry: Cutting Board Purchase"
