@@ -20,6 +20,16 @@ pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
 ```
 
+Email test
+
+- Copy `.env.example` to `.env` and fill in your email settings.
+- Do not check `.env` into version control.
+- Send a test buyer inquiry email with:
+
+```bash
+python send_test_email.py
+```
+
 Notes
 
 - If you need Google GenAI credentials, set the appropriate environment variables (for example `GOOGLE_API_KEY` or `GOOGLE_APPLICATION_CREDENTIALS`) before running the app.
