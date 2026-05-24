@@ -24,11 +24,20 @@ Email test
 
 - Copy `.env.example` to `.env` and fill in your email settings.
 - Do not check `.env` into version control.
+- By default, the test script now uses the Gmail API when `USE_GMAIL_API=true`.
+- Place your OAuth client credentials in `credentials.json` and authorize the script the first time it runs.
 - Send a test buyer inquiry email with:
 
 ```bash
 python send_test_email.py
 ```
+
+Gmail API setup
+
+1. In Google Cloud Console, create OAuth 2.0 Client Credentials for a desktop application.
+2. Download and save the JSON file to `credentials.json` in this project root.
+3. Set `USE_GMAIL_API=true` in `.env`.
+4. Run `python send_test_email.py` and complete the browser authorization flow.
 
 Notes
 
